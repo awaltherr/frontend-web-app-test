@@ -3,7 +3,9 @@ fetch("https://backend-web-app-test.onrender.com/", {
 })
   .then((res) => res.json())
   .then((data) => {
-    console.log(data);
+    document.getElementById(
+      "root"
+    ).textContent = `Data från backend:  ${data.hejsan}`;
   })
   .catch((error) => {
     console.log("Ett fel uppstod", error);
